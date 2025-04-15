@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+@theme {
+    --color-primary: oklch(0.59 0.1389 241.97);
+}

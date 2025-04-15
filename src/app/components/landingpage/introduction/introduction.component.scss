@@ -1,0 +1,26 @@
+.btnLaunch:hover img {
+    animation: alienJump ease-in-out 1s infinite;
+}
+
+@keyframes alienJump {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-0.4rem);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(0.4rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}

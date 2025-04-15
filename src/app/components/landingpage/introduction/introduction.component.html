@@ -1,9 +1,25 @@
-<p>introduction works!</p>
-<p-button label="Primary" />
-<p-button label="Secondary" severity="secondary" />
-<p-button label="Success" severity="success" />
-<p-button label="Info" severity="info" />
-<p-button label="Warn" severity="warn" />
-<p-button label="Help" severity="help" />
-<p-button label="Danger" severity="danger" />
-<p-button label="Contrast" severity="contrast" />
+<section class="grid grid-cols-3 w-full h-dvh p-20">
+    <div>Others</div>
+    <div class="text-center">Animation</div>
+    @if(personalInformation){
+    <div class="flex flex-col gap-y-5 w-2/3 h-full ml-auto justify-center">
+        <div class="flex flex-row text-2xl font-semibold text-primary">
+            {{ personalInformation.value?.firstName || '' }}
+            {{ personalInformation.value?.lastName || '' }}
+        </div>
+        <div class="whitespace-normal">
+            {{ personalInformation.value?.shortDescriptionOfMy || '' }}
+        </div>
+        <div class="flex flex-row gap-4 items-center">
+            ¿Do you know more?
+            <p-button class="btnLaunch" [rounded]="true" severity="secondary">
+                <span class="font-semibold">Launch</span>
+                <img class="h-[1rem]" src="assets/icons/alien.svg" alt="alien">
+            </p-button>
+        </div>
+    </div>
+    }
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <p-button icon="pi pi-angle-down" [rounded]="true" [text]="true" severity="secondary" />
+    </div>
+</section>
