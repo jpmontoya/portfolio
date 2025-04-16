@@ -2,6 +2,34 @@
     animation: alienJump ease-in-out 1s infinite;
 }
 
+.btnShortcut span {
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+.btnShortcut:hover span {
+    transform: translateX(1rem);
+}
+
+.btnShortcutProfile img {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(0) scale(0.9);
+}
+
+.btnShortcutProfile:hover img {
+    transform: scale(1.1);
+}
+
+.btnShortcut img {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(0) scale(0.9);
+}
+
+.btnShortcut:hover img {
+    transform: rotate(20deg) scale(1);
+}
+
+
 @keyframes alienJump {
     0% {
         transform: translateX(0);

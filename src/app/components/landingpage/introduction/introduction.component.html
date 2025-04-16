@@ -1,11 +1,48 @@
-<section class="grid grid-cols-3 w-full h-dvh p-20">
-    <div>Others</div>
-    <div class="text-center">Animation</div>
+<section class="grid grid-cols-3 w-full h-dvh py-20 bg-[#EDEFF0]">
+    <!-- <div class="w-min h-full justify-center flex flex-col gap-10 z-20 whitespace-nowrap"> -->
+    <div
+        class="w-min h-full justify-center flex flex-col gap-10 z-20 whitespace-nowrap mr-auto ml-1 bg-gradient-to-t from-[#0D0D0C] to-[#272728] px-2 py-10 rounded-md">
+        <div class="w-[2rem] flex flex-row items-center gap-3 mb-auto btnShortcutProfile cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/profile1.svg" alt="profile">
+            <span class="text-xl font-semibold">Profile</span>
+        </div>
+        <div class="w-[2rem] flex flex-row items-center gap-3 btnShortcut cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/brain.svg" alt="brain">
+            <span class="text-xl font-semibold">Skills</span>
+        </div>
+        <div class="w-[2rem] flex flex-row items-center gap-3 btnShortcut cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/technologies.svg" alt="technologies">
+            <span class="text-xl font-semibold">Technologies</span>
+        </div>
+        <div class="w-[2rem] flex flex-row items-center gap-3 btnShortcut cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/tools.svg" alt="tools">
+            <span class="text-xl font-semibold">Tools</span>
+        </div>
+        <div class="w-[2rem] flex flex-row items-center gap-3 btnShortcut cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/proyects.svg" alt="proyects">
+            <span class="text-xl font-semibold">Proyects</span>
+        </div>
+        <div class="w-[2rem] flex flex-row items-center gap-3 btnShortcut cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/certificate.svg" alt="certificate">
+            <span class="text-xl font-semibold">Certificates</span>
+        </div>
+        <div class="w-[2rem] flex flex-row items-center gap-3 btnShortcut cursor-pointer">
+            <img class="h-[2rem] brightness-0 invert-100" src="assets/icons/email.svg" alt="email">
+            <span class="text-xl font-semibold">Contact me</span>
+        </div>
+    </div>
+    <!-- <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+        <div class="absolute w-[50%] h-[50%] bg-[#000000] rounded-full blur-3xl opacity-10"></div>
+    </div> -->
+    <app-animation-room></app-animation-room>
     @if(personalInformation){
-    <div class="flex flex-col gap-y-5 w-2/3 h-full ml-auto justify-center">
-        <div class="flex flex-row text-2xl font-semibold text-primary">
-            {{ personalInformation.value?.firstName || '' }}
-            {{ personalInformation.value?.lastName || '' }}
+    <div class="flex flex-col gap-y-5 w-2/3 h-full ml-auto mr-20 justify-center z-20">
+        <div>
+            Hi i'm
+            <div class="flex flex-row text-2xl font-bold text-[#0D0D0C]">
+                {{ personalInformation.value?.firstName || '' }}
+                {{ personalInformation.value?.lastName || '' }}
+            </div>
         </div>
         <div class="whitespace-normal">
             {{ personalInformation.value?.shortDescriptionOfMy || '' }}
@@ -19,7 +56,7 @@
         </div>
     </div>
     }
-    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <p-button icon="pi pi-angle-down" [rounded]="true" [text]="true" severity="secondary" />
     </div>
 </section>
